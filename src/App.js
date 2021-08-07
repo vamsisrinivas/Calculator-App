@@ -30,9 +30,9 @@ const App = () => {
         <button className="operator" onClick={() => setInput(input + '*')}>*</button>
         <button className="operator" onClick={() => setInput(input + '0')}>0</button>
         <button className="operator" onClick={() => setInput(input + '.')}>.</button>
-        <button className="operator" onClick={() => setInput(input + '+/-')}>+/-</button>
+        <button className="operator" onClick={() => { setInput(''); setResult(0) }}></button>
+        {/* <button className="operator" onClick={() => setInput(input + '+/-')}>+/-</button> */}
         <button className="all-clear" onClick={() => { setInput(''); setResult(0) }}>AC</button>
-        <button className="operator" onClick={() => setInput(input + '/')}>/</button>
         <button className="operator" onClick={() => setInput(input + '%')}>%</button>
         <button className="operator" onClick={() => { setInput(''); setResult(0) }}></button>
         <button className="result" onClick={() => setResult(eval(input))}>=</button>
